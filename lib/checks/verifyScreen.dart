@@ -37,8 +37,6 @@ class _VerifyScreenState extends State<VerifyScreen> {
                   child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Text(
-                  //     'Verification link has been sent to ${currentUser.email}'),
                   RichText(
                       text: TextSpan(children: [
                     TextSpan(
@@ -53,13 +51,6 @@ class _VerifyScreenState extends State<VerifyScreen> {
                   SizedBox(
                     height: 22,
                   ),
-                  // Text(
-                  //   'Note: After successful Verification , restart the app.',
-                  //   style: TextStyle(
-                  //     fontSize: 12.0,
-                  //     color: Colors.red,
-                  //   ),
-                  // ),
                 ],
               )),
             ),

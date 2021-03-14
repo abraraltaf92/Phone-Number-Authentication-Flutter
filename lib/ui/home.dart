@@ -49,15 +49,12 @@ class _HomeState extends State<Home> {
                       actions: <Widget>[
                         FlatButton(
                           onPressed: () {
-                            print(' you choose no');
                             Navigator.of(context).pop();
                           },
                           child: Text('No'),
                         ),
                         FlatButton(
                           onPressed: () async {
-                            print('you choose yes');
-
                             Navigator.of(context).pop();
                             await _auth.signOut();
                           },

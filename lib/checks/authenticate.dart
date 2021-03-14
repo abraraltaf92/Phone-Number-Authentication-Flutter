@@ -1,28 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'package:hort_demo/ui/register.dart';
-// import 'package:hort_demo/ui/signIn.dart';
-
-// class Authenticate extends StatefulWidget {
-//   @override
-//   _AuthenticateState createState() => _AuthenticateState();
-// }
-
-// class _AuthenticateState extends State<Authenticate> {
-//   // shows Switch to SignIn Page
-//   bool showSignIn = true;
-//   void toggleView() {
-//     setState(() => showSignIn = !showSignIn);
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     if (showSignIn) {
-//       return Register(toggleView: toggleView);
-//     } else {
-//       return SignIn(toggleView: toggleView);
-//     }
-//   }
-// }
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';

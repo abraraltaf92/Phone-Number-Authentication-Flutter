@@ -74,26 +74,23 @@ class _LoginPhoneState extends State<LoginPhone> {
                     height: 16,
                   ),
                   Container(
-                    width: double.infinity,
+                    height: 50,
+                    width: MediaQuery.of(context).size.width * 0.8,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
                     child: FlatButton(
-                      child: Text("LOGIN VIA OTP"),
+                      child: Text("Get Your Code"),
                       textColor: Colors.white,
                       padding: EdgeInsets.all(16),
                       onPressed: () async {
                         if (_formKey.currentState.validate()) {
-                          // print('phoneNumber : ${phoneNumber.completeNumber}');
                           Get.to(() => OTPScreen(phoneNumber.completeNumber));
-                          // await _auth.signInWithPhoneNumber(
-                          //     phoneNumber.completeNumber, context);
                         } else {
                           setState(() {
                             error = ' Enter valid Number';
                           });
                         }
-
-                        // final phone = _phoneController.text.trim();
-                        // print('phone : $phone');
-                        // loginUser(phone, context);
                       },
                       color: Colors.blue,
                     ),

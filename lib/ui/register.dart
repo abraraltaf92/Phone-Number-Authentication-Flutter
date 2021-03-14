@@ -19,8 +19,9 @@ class _RegisterState extends State<Register> {
   final _emailIdController = TextEditingController(text: '');
   final _passwordController = TextEditingController(text: '');
   final _confirmPasswordController = TextEditingController(text: '');
+
   bool isChecked = false;
-  bool showSignIn = false;
+  bool showSignIn = false; // toggle for signUp/SignIn
   bool _passwordVisible = true;
   String email = '';
   String password = '';
@@ -29,6 +30,7 @@ class _RegisterState extends State<Register> {
   String errorSignUp = '';
   String errorPhone = '';
   bool loading = false;
+
   String validateEmail(String value) {
     Pattern pattern =
         r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
@@ -139,9 +141,6 @@ class _RegisterState extends State<Register> {
                                 });
                               },
                             ),
-                            // SizedBox(
-                            //   height: 10,
-                            // ),
                             TextFormField(
                               controller: _passwordController,
                               decoration: InputDecoration(
@@ -181,9 +180,6 @@ class _RegisterState extends State<Register> {
                                 });
                               },
                             ),
-                            // SizedBox(
-                            //   height: 10,
-                            // ),
                             TextFormField(
                               controller: _confirmPasswordController,
                               decoration: InputDecoration(
@@ -265,7 +261,6 @@ class _RegisterState extends State<Register> {
                     GestureDetector(
                       onTap: () async {
                         if (_formKey.currentState.validate() && isChecked) {
-                          // showSignIn = !showSignIn;
                           setState(() {
                             loading = true;
                             errorCheckbox = " ";

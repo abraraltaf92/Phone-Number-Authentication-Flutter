@@ -19,13 +19,14 @@ class _SignInState extends State<SignIn> {
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
 
-  bool showSignUp = false;
+  bool showSignUp = false; //toggle for signUp/SignIn page
   String email = '';
   String password = '';
   String error = '';
   String errorGoogle = '';
   bool _passwordVisible = true;
   bool loading = false;
+
   String validatePassword(String value) {
     if (value.trim().isEmpty || value.length < 6 || value.length > 14) {
       return 'Minimum 6 & Maximum 14 Characters!!!';
