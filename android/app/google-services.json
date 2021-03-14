@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "657883715469",
+    "project_id": "hortdemo",
+    "storage_bucket": "hortdemo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657883715469:android:32894163dd84aa28670fc4",
+        "android_client_info": {
+          "package_name": "com.abraraltaf.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657883715469-phuuub62aq0amcevslb3bp9l89qv1m5m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRrxg6itcI5mbH5PCFWhMrkGp-sQelVfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "657883715469-phuuub62aq0amcevslb3bp9l89qv1m5m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
