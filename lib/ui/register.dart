@@ -137,7 +137,7 @@ class _RegisterState extends State<Register> {
                               validator: validateEmail,
                               onChanged: (val) {
                                 setState(() {
-                                  email = val;
+                                  email = val.trim();
                                 });
                               },
                             ),

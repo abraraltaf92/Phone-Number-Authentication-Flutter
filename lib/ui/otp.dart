@@ -26,6 +26,7 @@ class _OTPScreenState extends State<OTPScreen> {
   @override
   void initState() {
     super.initState();
+    print('yele phone num: ${widget.phone}');
     _verifyPhone();
   }
 
@@ -42,7 +43,7 @@ class _OTPScreenState extends State<OTPScreen> {
             margin: EdgeInsets.only(top: 40),
             child: Center(
               child: Text(
-                'Verify ${widget.phone}',
+                'Verify +91${widget.phone}',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
               ),
             ),
@@ -97,7 +98,7 @@ class _OTPScreenState extends State<OTPScreen> {
 
   _verifyPhone() async {
     await FirebaseAuth.instance.verifyPhoneNumber(
-        phoneNumber: widget.phone,
+        phoneNumber: '+91${widget.phone}',
         verificationCompleted: (PhoneAuthCredential credential) async {
           await FirebaseAuth.instance
               .signInWithCredential(credential)
@@ -110,7 +111,7 @@ class _OTPScreenState extends State<OTPScreen> {
         verificationFailed: (FirebaseAuthException e) {
           print(e.message);
         },
-        codeSent: (String verificationId, int resendToken) async {
+        codeSent: (String verificationId, [int forceResendingToken]) async {
           setState(() {
             isSent = true;
 

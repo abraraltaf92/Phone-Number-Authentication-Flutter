@@ -85,7 +85,7 @@ class _LoginPhoneState extends State<LoginPhone> {
                       padding: EdgeInsets.all(16),
                       onPressed: () async {
                         if (_formKey.currentState.validate()) {
-                          Get.to(() => OTPScreen(phoneNumber.completeNumber));
+                          Get.to(() => OTPScreen(phoneNumber.number));
                         } else {
                           setState(() {
                             error = ' Enter valid Number';

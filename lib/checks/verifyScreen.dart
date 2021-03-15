@@ -1,8 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:get/get.dart';
 import 'package:hort_demo/constants/colors.dart';
 import 'package:hort_demo/services/auth.dart';
+import 'package:hort_demo/ui/signIn.dart';
 
 class VerifyScreen extends StatefulWidget {
   @override
@@ -62,6 +64,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
                 ),
                 onPressed: () async {
                   await _auth.signOut();
+                  Get.off(SignIn());
                 },
               ),
               FlatButton(
